@@ -45,10 +45,7 @@ class pet {
             }
 
             //current stats
-            System.out.println("Stats");
-            System.out.println("Health: " + currentHealth);
-            System.out.println("Hunger: " + currentHunger);
-            System.out.println("Happiness: " + currentHappy);
+
 
             //third menu page which allow user to start playing for points
             System.out.println("\nWhat would you like to do?");
@@ -78,9 +75,7 @@ class pet {
             } else if (optionAns2 == 4) {
                 System.out.println("Thank you for playing! Hope you enjoyed it!");
                 System.out.println("Here are your final stats");
-                System.out.println("Health: " + currentHealth);
-                System.out.println("Hunger: " + currentHunger);
-                System.out.println("Happiness: " + currentHappy);
+                displayStatus();
 
                 break;
             }
@@ -88,28 +83,22 @@ class pet {
 
         scanner.nextLine();
     }
-
     public void feed(Scanner scanner) {
         // main if statement
         System.out.println("What would you like to feed your pet?");
         System.out.println("Salmon - 1 , Tuna - 2 or Dry Food - 3");
         int foodChoice = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("You entered: " + foodChoice);
-        int randomNumber1 = (int) (Math.random() * 5);
+        System.out.println("Who is hungry");
+        int randomNumber1 = (int)(Math.random()* 5);
         if (foodChoice == 1) {
-            System.out.println("BEFORE: " + currentHunger);
             currentHunger += randomNumber1;
-            System.out.println("AFTER: " + currentHunger + "\n");
         } else if (foodChoice == 2) {
-            System.out.println("BEFORE: " + currentHunger);
             currentHunger += randomNumber1;
-            System.out.println("AFTER: " + currentHunger + "\n");
         } else if (foodChoice == 3) {
-            System.out.println("BEFORE: " + currentHunger);
             currentHunger += randomNumber1;
-            System.out.println("AFTER: " + currentHunger + "\n");
         }
+        displayStatus();
     }
 
     public void play(Scanner scanner) {
@@ -117,22 +106,17 @@ class pet {
         System.out.println("Lazor Light - 1 , Ball - 2 or Petting - 3");
         int gameChoice = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("You entered: " + gameChoice);
-        int randomNumber2 = (int) (Math.random() * 5);
+        System.out.println("Time to play");
+        int randomNumber2 = (int)(Math.random()* 5);
         //create random number picker and random plus or minus
         if (gameChoice == 1) {
-            System.out.println("BEFORE: " + currentHappy);
             currentHappy += randomNumber2;
-            System.out.println("AFTER: " + currentHappy + "\n");
         } else if (gameChoice == 2) {
-            System.out.println("BEFORE: " + currentHappy);
             currentHappy += randomNumber2;
-            System.out.println("AFTER: " + currentHappy + "\n");
         } else if (gameChoice == 3) {
-            System.out.println("BEFORE: " + currentHappy);
             currentHappy -= randomNumber2;
-            System.out.println("AFTER: " + currentHappy + "\n");
         }
+        displayStatus();
     }
 
     public void rest(Scanner scanner) {
@@ -140,20 +124,29 @@ class pet {
         //create random number picker and random plus or minus
         // generate random number 1-60 (simulate an hour max of sleep)
         //0-20 = -3 points, 21-40 = 2 points, 41-60=4 points
-        int randomNumber3 = (int) (Math.random() * 60);
-        System.out.println(randomNumber3);
+        int randomNumber3 = (int)(Math.random()* 60);
+        System.out.println("Your cat slept for: "+randomNumber3+" minutes!");
         if (randomNumber3 <= 20) {
-            System.out.println("BEFORE: " + currentHealth);
             currentHealth -= 3;
-            System.out.println("AFTER: " + currentHealth + "\n");
-        } else if (randomNumber3 >= 21 && randomNumber3 <= 40) {
-            System.out.println("BEFORE: " + currentHealth);
-            currentHealth += 2;
-            System.out.println("AFTER: " + currentHealth + "\n");
-        } else if (randomNumber3 >= 41 && randomNumber3 <= 60) {
-            System.out.println("BEFORE: " + currentHealth);
-            currentHealth += 4;
-            System.out.println("AFTER: " + currentHealth + "\n");
         }
+        else if (randomNumber3 >= 21 && randomNumber3 <= 40) {
+            currentHealth += 2;
+        }
+        else if (randomNumber3 >= 41 && randomNumber3 <= 60) {
+            currentHealth += 4;
+        }
+        displayStatus();
+    }
+
+    public void displayStatus()
+        {System.out.println("         __        __      ");
+        System.out.println("   _____/ /_____ _/ /______");
+        System.out.println("  / ___/ __/ __ `/ __/ ___/");
+        System.out.println(" (__  ) /_/ /_/ / /_(__  ) ");
+        System.out.println("/____/\\__/\\__,_/\\__/____/  ");
+        System.out.println("                            ");
+        System.out.println("❤️ Health: " + currentHealth);
+        System.out.println("🍖 Hunger: " + currentHunger);
+        System.out.println("😺 Happiness: " + currentHappy);
     }
 }
