@@ -2,6 +2,19 @@ import java.util.Scanner; //imports scanner
 
 public class Main { //creates main class
     public static void main(String[] args) {
+        System.out.println("                    ___                            ___  ");
+        System.out.println("                   (   )                          (   ) ");
+        System.out.println("   .─..     .──.    │ │_          .─..     .───.   │ │  ");
+        System.out.println("  ╱    ╲   ╱    ╲  (   __)       ╱    ╲   ╱ .─, ╲  │ │  ");
+        System.out.println(" ' .─,  ; │  .─. ;  │ │         ' .─,  ; (__) ; │  │ │  ");
+        System.out.println(" │ │  . │ │  │ │ │  │ │ ___     │ │  . │   .'`  │  │ │  ");
+        System.out.println(" │ │  │ │ │  │╱  │  │ │(   )    │ │  │ │  ╱ .'│ │  │ │  ");
+        System.out.println(" │ │  │ │ │  ' _.'  │ │ │ │     │ │  │ │ │ ╱  │ │  │ │  ");
+        System.out.println(" │ │  ' │ │  .'.─.  │ ' │ │     │ │  ' │ ; │  ; │  │ │  ");
+        System.out.println(" │ `─'  ' '  `─' ╱  ' `─' ;     │ `─'  ' ' `─'  │  │ │  ");
+        System.out.println(" │ ╲__.'   `.__.'    `.__.      │ ╲__.'  `.__.'_. (___) ");
+        System.out.println(" │ │                            │ │                     ");
+        System.out.println("(___)                          (___)                    ");
         System.out.println("Welcome to PawPal!");
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your first name? ");
@@ -13,7 +26,19 @@ public class Main { //creates main class
         while (continueProgram.equalsIgnoreCase("yes")) {
 
             //first menu page to start the game
-            System.out.println("Let's start the game!\nMenu:");
+            System.out.println("                                               ");
+            System.out.println("                                               ");
+            System.out.println(" ___ .─. .─.     .──.    ___ .─.    ___  ___  ");
+            System.out.println("(   )   '   ╲   ╱    ╲  (   )   ╲  (   )(   ) ");
+            System.out.println(" │  .─.  .─. ; │  .─. ;  │  .─. .   │ │  │ │  ");
+            System.out.println(" │ │  │ │  │ │ │  │ │ │  │ │  │ │   │ │  │ │  ");
+            System.out.println(" │ │  │ │  │ │ │  │╱  │  │ │  │ │   │ │  │ │  ");
+            System.out.println(" │ │  │ │  │ │ │  ' _.'  │ │  │ │   │ │  │ │  ");
+            System.out.println(" │ │  │ │  │ │ │  .'.─.  │ │  │ │   │ │  ; '  ");
+            System.out.println(" │ │  │ │  │ │ '  `─' ╱  │ │  │ │   ' `─'  ╱  ");
+            System.out.println("(___)(___)(___) `.__.'  (___)(___)   '.__.'   ");
+            System.out.println("                                               ");
+            System.out.println("                                               ");
             System.out.println("Option 1: Adopt pet!");
             System.out.println("Option 2: Quit Game");
             System.out.println("Please select your option:");
@@ -38,11 +63,10 @@ public class Main { //creates main class
             //second menu page to create pet RECREATE TAKE INSPO FROM WEEK 7
             if (optionAns1 == 1) {
                 System.out.println("Cat Profile");
+
                 System.out.println("Choose a name: ");
                 String catname = scanner.nextLine();
-                System.out.println("Would you like to adopt a black, white or ginger cat: ");
-                String cattype = scanner.nextLine();
-                System.out.println("\nYou adopted a " + cattype + " cat named " + catname + "!");
+                System.out.println("\nYou adopted a  cat named " + catname + "!");
                 pet myPet = new pet();
                 myPet.startPetCare();
 
@@ -61,7 +85,6 @@ public class Main { //creates main class
         // starting pet class
         class pet {
             public void startPetCare() {
-                System.out.println("Pet care started!");
             }
         }
     }
