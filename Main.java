@@ -2,6 +2,7 @@ import java.util.Scanner; //imports scanner
 
 public class Main { //creates main class
     public static void main(String[] args) {
+        // logo for game ASCII
         System.out.println("                    ___                            ___  ");
         System.out.println("                   (   )                          (   ) ");
         System.out.println("   .─..     .──.    │ │_          .─..     .───.   │ │  ");
@@ -18,14 +19,13 @@ public class Main { //creates main class
         System.out.println("Welcome to PawPal!");
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your first name? ");
-        String firstname = scanner.nextLine();
+        String username = scanner.nextLine(); // stores username
 
-        String continueProgram = "yes";
 
         // While loop to keep the programme running until user chooses to quit
-        while (continueProgram.equalsIgnoreCase("yes")) {
+        while (true) {
 
-            //first menu page to start the game
+            //first menu page to start the game ASCII
             System.out.println("                                               ");
             System.out.println("                                               ");
             System.out.println(" ___ .─. .─.     .──.    ___ .─.    ___  ___  ");
@@ -58,36 +58,36 @@ public class Main { //creates main class
             }
             scanner.nextLine();
             // game starts here
-            System.out.println("\nThank you, " + firstname + ", you selected option " + optionAns1 + "\n");
+            System.out.println("\nThank you, " + username + ", you selected option " + optionAns1 + "\n");
             //arrays with other animals
             //second menu page to create pet RECREATE TAKE INSPO FROM WEEK 7
             if (optionAns1 == 1) {
-                System.out.println("Cat Profile");
-
+                System.out.println("CHOOSE AN ANIMAL");
+                System.out.println(" /\\_/\\       /\\_./\\       ,~.  ");
+                System.out.println("( >w< )     ( @.@ )      (o,o) ");
+                System.out.println(" (   )       (  -  )~     { \" } ");
+                System.out.println("  ^^ ^^       ^^ ^^        -\"-  ");
+                System.out.println("  Cat         Dog          Bird ");
                 System.out.println("Choose a name: ");
                 String catname = scanner.nextLine();
-                System.out.println("\nYou adopted a  cat named " + catname + "!");
+                System.out.println("\nYou adopted a cat named " + catname + "!");
                 pet myPet = new pet();
                 myPet.startPetCare();
 
             }
             // breaks loop
-            else if (optionAns1 == 2) {
+            else {
                 System.out.println("Thank you for playing!");
                 break;
             }
         }
 
-        // final message if user quits before class pet starts
-        System.out.println("Goodbye, " + firstname + "! Thank you for using the programme.");
+        // final message, user quits before class pet starts
+        System.out.println("Goodbye, " + username + "! Thank you for using the programme.");
         scanner.close();
-
-        // starting pet class
-        class pet {
-            public void startPetCare() {
-            }
-        }
     }
 }
+
+
 
 
