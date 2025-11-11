@@ -1,51 +1,70 @@
 import java.util.Scanner; //imports scanner
 
-class pet {
+class pet { // main class for game
     // variables for point system
     int currentHealth = 3;
 
     int currentHunger = 3;
 
     int currentHappy = 3;
-    boolean petAlive = true;
 
 
     public void startPetCare() { // starts playable part of game
         Scanner scanner = new Scanner(System.in);
-        String continueProgram1 = "yes";
 
         // While loop to keep the programme running
 
-        while (continueProgram1.equalsIgnoreCase("yes")) {
+        while (true) {
             // 3 if statements control max and min value of point system
             // max 20 points won't exceed 20
             // min 0 game will end once any variable hits 0
             if (currentHealth >= 20) {
-                int currentHealth = 20;
+                currentHealth = 20;
             } else if (currentHealth <= 0) {
-                boolean petAlive = false;
                 System.out.println("You failed :( Your cat died");
+                System.out.println(" ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓██████████████▓▒░░▒▓████████▓▒░       ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓███████▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("░▒▓█▓▒▒▓███▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░        ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓██████▓▒░ ░▒▓███████▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░  ");
+                System.out.println(" ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░       ░▒▓██████▓▒░   ░▒▓██▓▒░  ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("                                                                                                                        ");
+                System.out.println("                                                                                                                         ");
                 break;
             }
 
             if (currentHunger >= 20) {
-                int currentHealth = 20;
+                currentHunger = 20;
             } else if (currentHunger <= 0) {
-                boolean petAlive = false;
                 System.out.println("You failed :( Your cat died");
+                System.out.println(" ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓██████████████▓▒░░▒▓████████▓▒░       ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓███████▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("░▒▓█▓▒▒▓███▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░        ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓██████▓▒░ ░▒▓███████▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░  ");
+                System.out.println(" ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░       ░▒▓██████▓▒░   ░▒▓██▓▒░  ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("                                                                                                                        ");
+                System.out.println("                                                                                                                        ");
                 break;
             }
 
             if (currentHappy >= 20) {
-                int currentHealth = 20;
+                currentHappy = 20;
             } else if (currentHappy <= 0) {
-                boolean petAlive = false;
                 System.out.println("You failed :( Your cat died");
+                System.out.println(" ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓██████████████▓▒░░▒▓████████▓▒░       ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓███████▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("░▒▓█▓▒▒▓███▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░        ░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒▒▓█▓▒░░▒▓██████▓▒░ ░▒▓███████▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░  ");
+                System.out.println("░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░░▒▓█▓▒░ ░▒▓█▓▓█▓▒░ ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░  ");
+                System.out.println(" ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░       ░▒▓██████▓▒░   ░▒▓██▓▒░  ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ ");
+                System.out.println("                                                                                                                        ");
+                System.out.println("                                                                                                                        ");
                 break;
             }
-
-            //current stats
-
 
             //third menu page which allow user to start playing for points
             System.out.println("\nWhat would you like to do?");
@@ -55,7 +74,7 @@ class pet {
             System.out.println("Option 4: End Game");
             int optionAns2;
 
-            while (true) {
+            while (true) { // 4 is last option
                 System.out.print("Please select your option (1 or 4): ");
                 optionAns2 = scanner.nextInt();
 
@@ -66,49 +85,52 @@ class pet {
 
                 }
             }
-            if (optionAns2 == 1) {
+
+            if (optionAns2 == 1) { // calls separate methods instead of one big if loop
                 feed(scanner);
             } else if (optionAns2 == 2) {
                 play(scanner);
             } else if (optionAns2 == 3) {
-                rest(scanner);
-            } else if (optionAns2 == 4) {
+                rest();
+            } else { // user quits game and while loop breaks
                 System.out.println("Thank you for playing! Hope you enjoyed it!");
                 System.out.println("Here are your final stats");
                 displayStatus();
 
                 break;
             }
-        }
 
+        }
         scanner.nextLine();
     }
-    public void feed(Scanner scanner) {
+ // separate methods
+    public void feed(Scanner scanner) { // user chooses what to feed and points are decided using Math.random, changes hunger
         // main if statement
-        System.out.println("What would you like to feed your pet?");
+        System.out.println("\nWhat would you like to feed your pet?");
         System.out.println("Salmon - 1 , Tuna - 2 or Dry Food - 3");
         int foodChoice = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Who is hungry");
+        System.out.println("Who is hungry???");
         int randomNumber1 = (int)(Math.random()* 5);
+        //create random number picker and random plus or minus which decides amount of points
         if (foodChoice == 1) {
             currentHunger += randomNumber1;
         } else if (foodChoice == 2) {
-            currentHunger += randomNumber1;
+            currentHunger -= randomNumber1;
         } else if (foodChoice == 3) {
             currentHunger += randomNumber1;
         }
         displayStatus();
     }
 
-    public void play(Scanner scanner) {
-        System.out.println("What game would you like to play with your pet?");
-        System.out.println("Lazor Light - 1 , Ball - 2 or Petting - 3");
+    public void play(Scanner scanner) { // user chooses what to play and points are decided using Math.random but last option reduces points, changes happy
+        System.out.println("\nWhat game would you like to play with your pet?");
+        System.out.println("Lazer Light - 1 , Ball - 2 or Petting - 3");
         int gameChoice = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Time to play");
+        System.out.println("Time to play!!!");
         int randomNumber2 = (int)(Math.random()* 5);
-        //create random number picker and random plus or minus
+        //create random number picker and random plus or minus which decides amount of points
         if (gameChoice == 1) {
             currentHappy += randomNumber2;
         } else if (gameChoice == 2) {
@@ -119,9 +141,9 @@ class pet {
         displayStatus();
     }
 
-    public void rest(Scanner scanner) {
-        System.out.println("Your cat is resting");
-        //create random number picker and random plus or minus
+    public void rest() { // user chooses rest and points are decided using Math.random, range of number relates to points given, changes health
+        System.out.println("\nYour cat is resting...");
+        //create random number picker and random plus or minus which decides amount of points
         // generate random number 1-60 (simulate an hour max of sleep)
         //0-20 = -3 points, 21-40 = 2 points, 41-60=4 points
         int randomNumber3 = (int)(Math.random()* 60);
@@ -138,7 +160,7 @@ class pet {
         displayStatus();
     }
 
-    public void displayStatus()
+    public void displayStatus() // method to display stats and can be drawn again easier
         {System.out.println("         __        __      ");
         System.out.println("   _____/ /_____ _/ /______");
         System.out.println("  / ___/ __/ __ `/ __/ ___/");
